@@ -1,0 +1,60 @@
+.alert {
+  position: absolute !important;
+  right: 12px;
+  top: 12px;
+  min-width: 300px;
+  z-index: 2000;
+  text-align: center;
+}
+
+.body {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.zadani {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #e8e8e8 !important;
+}
+
+.hint {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #fff4bb !important;
+}
+/* LOADING PAGE */
+.row {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+
+#context {
+  padding-top: 100px;
+  min-height: 200px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+section.lvlAwesome .badge {
+  font-size: 200px;
+}
