@@ -97,9 +97,6 @@ $(document).ready(function () {
   $('button').click(function () {
     correct = true;
     if ($(this).hasClass('btn-danger')) {
-      $('#somethingForYou').html(`
-      <p> 🐵 🙈 Ne. Takhle ne. 🙉 🙊 </p>
-      `)
       return
     }
 
@@ -113,6 +110,9 @@ $(document).ready(function () {
     } else {
       $(this).removeClass('btn-primary')
       $(this).addClass('btn-danger')
+      $('#somethingForYou').html(`
+      <p> 🐵 🙈 Ne. Takhle ne. 🙉 🙊 </p>
+      `)
     }
   })
   timeout()
