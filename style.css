@@ -63,3 +63,7 @@ section.lvlAwesome .badge {
   padding: 10px;
   margin: 10px;
 }
+
+.humongous {
+  font-size: 200px;
+}

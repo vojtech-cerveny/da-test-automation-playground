@@ -14,10 +14,10 @@
       crossorigin="anonymous"
     />
 
-    <title>DA | Loading</title>
+    <title>DA | Find 🦊 if you can</title>
   </head>
 
-  <body>
+  <body class="js-explosion">
     <nav class="navbar sticky-top navbar-light bg-light">
       <a href="/"><img src="images/logo.png" height="75px" /></a>
       <a class="navbar-brand" href="/">Czechitas DA: Testování Ostrava 2020</a>
@@ -30,7 +30,7 @@
         <a class="nav-link" href="hover.html">Hover</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="loading.html">Loading</a>
+        <a class="nav-link" href="loading.html">Loading</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="adding.html">Items</a>
@@ -51,45 +51,12 @@
         <a class="nav-link" href="selectorsButtons.html">Buttons</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="findfox.html">Find fox</a>
+        <a class="nav-link active" href="findfox.html">Find fox</a>
       </li>
     </ul>
-    <div class="container body loadingSection">
-      <h1>Loading...</h1>
-      <div class="card zadani">
-        <div class="card-body">
-          <h5 class="card-title">Zadání</h5>
-          <ol>
-            <li>Ověř, že po kliknutí na tlačítko se zobrazí <code>Loading</code> animace než se načtou data.</li>
-            <li>Ověř, že po kliknutí na tlačítko se načte pravda pravdoucí po animaci.</li>
-            <li>Ověř, že po opakovaném kliknutí na tlačítko se pravda pravdoucí zobrazí jen jednou.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="card hint">
-        <div class="card-body">
-          <h5 class="card-title">Hint</h5>
-          <p class="card-text">
-            Využij <code>$('TvujSelector')</code> pro vyhledání jednoho
-            elementu, popřípadě <code>$$('TvujSelector')</code> pro pole
-            elementů.
-          </p>
-          <p class="card-text">
-            Využij <code>$('Selector').moveTo()</code> pro najetí myši na daný
-            element.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col center" id="context"></div>
-      </div>
-      <div class="row">
-        <div class="col center">
-          <button id="loading-button" type="button" class="btn btn-primary">
-            Show me secret!
-          </button>
-        </div>
-      </div>
+    <div class="container body" style="text-align: center;">
+      <button class="btn btn-primary" style="font-size: 200px;">🐶</button>
+      <p id="somethingForYou" class="approved-by-vladimir"></p>
     </div>
 
     <script
@@ -102,6 +69,6 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <script src="js/loading.js"></script>
+    <script src="js/findFox.js"></script>
   </body>
 </html>
