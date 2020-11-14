@@ -15,7 +15,7 @@ $(document).ready(function () {
   $("#login-submit").click(() => {
     const inputPasswordValue = $("#login-password").val()
     const inputUsernameValue = $("#login-username").val()
-
+$("#login-submit").html('<span class="spinner-border spinner-border-sm" role="status aria-hidden="true"></span>Loading...')
     if (inputUsernameValue == "" &&
       inputPasswordValue == "") {
       showLoginPopUp("danger", "Username a heslo není zadáno!")
@@ -31,6 +31,7 @@ $(document).ready(function () {
     }
     else if (inputUsernameValue == username &&
       inputPasswordValue == password) {
+
       showLoginPopUp("success", "Přihlášení proběhlo v pořádku")
       setTimeout(() => {
         document.location = "/logged.html"
@@ -38,7 +39,11 @@ $(document).ready(function () {
       return
     } else {
       showLoginPopUp("danger", "Špatné heslo!")
-      setTimeout(() => $("#login-password").val(""), 1000)
+      setTimeout(() => {
+        $("#login-password").val("")
+        $("#login-submit").html('Log in!')
+        }
+        , 1000)
       return
     }
   })

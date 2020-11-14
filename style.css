@@ -58,3 +58,8 @@ section {
 section.lvlAwesome .badge {
   font-size: 200px;
 }
+
+#selector-buttons button {
+  padding: 10px;
+  margin: 10px;
+}

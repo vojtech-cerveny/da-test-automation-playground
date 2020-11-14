@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>DA | Adding</title>
   </head>
 
   <body>
@@ -47,13 +47,26 @@
       <li class="nav-item">
         <a class="nav-link" href="selectors.html">Selectors</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="selectorsButtons.html">Buttons</a>
+      </li>
     </ul>
     <div class="container body">
       <h1>Přidávání a odebírání elementů</h1>
-      <div class="card zadani">
-        <div class="card-body">
-          <h5 class="card-title">Zadání</h5>
-          <ol>
+
+      <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Zadání
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+<ol>
             <li>
               Ověř, že tlačíko <code>Přidej kočku</code> přidá kartu s kočkou.
             </li>
@@ -81,12 +94,20 @@
             <li>Ověř, že tlačítka na odebrání jsou aktivní jen, když je zobrazena aspoň jedna karta kočky </li>
             <li>Ověř, že tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky.</li>
           </ol>
-        </div>
       </div>
-      <div class="card hint">
-        <div class="card-body">
-          <h5 class="card-title">Hint</h5>
-          <p class="card-text">
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Hint
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+ <p class="card-text">
             Využij <code>$('TvujSelector')</code> pro vyhledání jednoho
             elementu, popřípadě <code>$$('TvujSelector')</code> pro pole
             elementů.
@@ -94,8 +115,11 @@
           <p class="card-text">
             Využij <code>it.only("test", ()=>{})</code> pro spuštění jednoho testu a ověření, že lze pustit samostatně.
           </p>
-        </div>
       </div>
+    </div>
+  </div>
+</div>
+
       <div class="row">
         <div class="col">
           <div class="btn-group" role="group">

@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
 
-    <title>Hello, world!</title>
-  </head>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	 crossorigin="anonymous" />
 
-  <body>
-    <nav class="navbar sticky-top navbar-light bg-light">
-      <a href="/"><img src="images/logo.png" height="75px" /></a>
+	<title>DA | Selectors</title>
+</head>
+
+<body>
+	<nav class="navbar sticky-top navbar-light bg-light">
+		<a href="/"><img src="images/logo.png" height="75px" /></a>
       <a class="navbar-brand" href="/">Czechitas DA: Testování Ostrava 2020</a>
     </nav>
     <ul class="nav nav-tabs">
@@ -46,6 +40,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="selectors.html">Selectors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="selectorsButtons.html">Buttons</a>
       </li>
     </ul>
     <div class="container body">
@@ -120,6 +117,7 @@
           Dědeček honem naladil housličky, babička si připravila bubínek a už
           oba spustili písničku:
         </p>
+        <img src="/images/budulinek.jpg" width="100%" class="story-image">
         <p>
           „Máme doma housličky a pěkný bubínek, jsou tam tři lištičky a náš
           Budulínek.“
@@ -153,6 +151,16 @@
           Pytel s liškami hodil dědeček na zem, našel si prut a liškám vyprášil
           kožich. Potom pytel rozvázal a pustil lišky ven. Ty utíkaly!
         </p>
+
+        <div class="mx-auto">
+          <button class="btn btn-primary" id="like-button" type="submit">Dám like!</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px">
+          <h3>Počet lajků <3</h3>
+          <h1><span id="lvlAwesome" class="badge badge-primary">0</span></h1>
+        </div>
+
       </section>
     </div>
 
@@ -166,5 +174,6 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+        <script src="js/selectors.js"></script>
   </body>
 </html>

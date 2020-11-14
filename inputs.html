@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>DA | Inputs</title>
   </head>
 
   <body>
@@ -47,6 +47,9 @@
       <li class="nav-item">
         <a class="nav-link" href="selectors.html">Selectors</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="selectorsButtons.html">Buttons</a>
+      </li>
     </ul>
     <div class="container body">
       <h1>Inputs</h1>
@@ -58,6 +61,7 @@
             type="range"
             class="form-control-range"
             id="formControlRange"
+            style="width: 100px"
           />
           <div style="text-align: center; margin-top: 20px">
             <h3>LVL úžasnosti</h3>
@@ -67,7 +71,7 @@
       </section>
 
       <section id="secretPasswordSection">
-        <span id="secretPassword" class="hidden"></span>
+        <input name="secret" type="hidden" id="secretPassword" value="">
         <div class="form-row align-items-center">
           <div class="col-auto">
             <input type="password" class="form-control mb-2" id="secretNumberInput" placeholder="Secret number">
