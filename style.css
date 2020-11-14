@@ -67,3 +67,7 @@ section.lvlAwesome .badge {
 .humongous {
   font-size: 200px;
 }
+
+#somethingForYou p {
+  font-size: 25px;
+}

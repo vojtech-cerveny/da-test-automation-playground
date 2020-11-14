@@ -11,21 +11,21 @@ const explode = (x, y) => {
   c.style.left = (x - 100) + 'px';
   c.style.top = (y - 100) + 'px';
   c.style.pointerEvents = 'none';
-  c.style.width = 200 + 'px';
-  c.style.height = 200 + 'px';
+  c.style.width = 400 + 'px';
+  c.style.height = 400 + 'px';
   c.style.zIndex = 100;
-  c.width = 200 * ratio;
-  c.height = 200 * ratio;
+  c.width = 400 * ratio;
+  c.height = 400 * ratio;
   document.body.appendChild(c);
 
   for (var i = 0; i < bubbles; i++) {
     particles.push({
       x: c.width / 2,
       y: c.height / 2,
-      radius: r(20, 30),
+      radius: r(20, 40),
       color: colors[Math.floor(Math.random() * colors.length)],
       rotation: r(0, 360, true),
-      speed: r(8, 12),
+      speed: r(10, 21),
       friction: 0.9,
       opacity: r(0, 0.5, true),
       yVel: 0,
@@ -34,7 +34,7 @@ const explode = (x, y) => {
   }
 
   render(particles, ctx, c.width, c.height);
-  setTimeout(() => document.body.removeChild(c), 1000);
+  setTimeout(() => document.body.removeChild(c), 500);
 }
 
 const render = (particles, ctx, width, height) => {
@@ -83,11 +83,11 @@ function timeout() {
 let explodeCounter = 0
 setExplosion = () => {
   setTimeout(function () {
-    if (explodeCounter > 1000) {
+    if (explodeCounter > 6000) {
       return
     }
     explodeCounter++
-    explode(Math.floor(Math.random() * window.innerWidth - 100), Math.floor(Math.random() * window.innerHeight - 100))
+    explode(Math.floor(Math.random() * window.innerWidth - 300), Math.floor(Math.random() * window.innerHeight - 300))
     setExplosion();
   }, 100);
 }
@@ -107,8 +107,7 @@ $(document).ready(function () {
       $(this).removeClass('btn-primary')
       $(this).addClass('btn-success')
       $('#somethingForYou').html(`
-      <p> WOW! Jsi dobrá, jsi nejlepší! Pátý úkol splněn! 🦊 </p>
-      <img src="https://media4.giphy.com/media/dvBgr7pA6FTJOMOALY/giphy.gif?cid=ecf05e47o117lzv6sly32a8j5sayslp3hanx48a7pa7gm1d8&rid=giphy.gif" alt="fox" />
+      <p> Gratuluji! Pátý úkol splněn! Nastav <code>browser.pause(30000)</code> a vychutnej si ohňostroj s 🦊 </p>
       `)
       setExplosion()
     } else {
