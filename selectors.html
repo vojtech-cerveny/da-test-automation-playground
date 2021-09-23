@@ -54,34 +54,18 @@
       <div class="card zadani">
         <div class="card-body">
           <h5 class="card-title">Zadání</h5>
-          <p class="card-text">V tabulce ověřit tyto data</p>
           <ol>
-            <li>Najdi pomocí <code>data-qa</code> element za pouziti CSS selectoru</li>
-            <li>Najdi pomocí <code>id</code> element za pouziti CSS selectoru</li>
-            <li>Najdi pomocí <code>class</code> elementy za pouziti CSS selectoru</li>
-            <li>Najdi pomocí <code>a (link)</code> za pouziti jakehokoliv CSS selectoru</li>
-
-            <li>Najdi pomocí <code>id</code> element za pouziti XPATH selectoru</li>
-            <li>Najdi pomocí <code>class</code> elementy za pouziti XPATH selectoru</li>
+            <li>Najdi element pomocí atributu <code>data-qa</code></li>
+            <li>Najdi element s <code>id</code> s hodnotou <code>zapletka</code></li>
+            <li>Najdi elementy, které jsou označeny třídou <code>this-is-interesting-paragraph</code></li>
+            <li>Najdi element obrázku</li>
+            <li>Najdi element s <code>id</code> s hodnotou <code>zapletka</code> za použití XPATH</li>
+            <li>Najdi elementy s <code>class="this-is-interesting-paragraph"</code> za použití XPATH</li>
             <li>Spočítej, kolik má pohádka odstavců</li>
-            <li>Okomentuj svůj kód!</li>
+            <li>Nakonec dej pohádce like. Přesněji, tolik lajků, kolik je členů tvé domácnosti (včetně mazlíčků).</li>
           </ol>
         </div>
       </div>
-      <div class="card hint">
-        <div class="card-body">
-          <h5 class="card-title">Hint</h5>
-          <p class="card-text">Využij <code>$('TvujSelector')</code> pro vyhledání jednoho elementu, popřípadě <code>$$('TvujSelector')</code> pro pole elementů.</p>
-          <p class="card-text">Využij DevTools a vyhledávání v záložce <code>Elements</code>.</p>
-        </div>
-      </div>
-
-
-      <p data-qa="selector-by-dataQA">element pomocí DATA-QA</p>
-      <p id="sector-by-id">element pomocí ID</p>
-      <p class="selector-by-class">1. element pomoci class</p>
-      <p class="selector-by-class">2. element pomoci class</p>
-      <a href="#" tabindex="1"> element pomoci jakehokoliv attributu</a>
 
       <section id="pohadka">
         <h2>O Budulínkovi</h2>
@@ -91,11 +75,11 @@
           říkávala: „Buď hodný, Budulínku, hraj si hezky a nikomu neotvírej! V
           troubě máš hrášek.“
         </p>
-        <p>
+        <p data-qa="selector-by-dataQA">
           Budulínek si hrál, potom dostal hlad a dal se do hrášku. Najednou
           přišla liška a prosila:
         </p>
-        <p>„Budulínku, dej mi hrášku, povozím tě na ocásku.“</p>
+        <p id="zapletka">„Budulínku, dej mi hrášku, povozím tě na ocásku.“</p>
         <p>Budulínek, že nedá. Ale liška tuze prosila:</p>
         <p>
           „Budulínku, dej mi hrášku, povozím tě na ocásku! Pojedeme po lavici,
@@ -105,12 +89,12 @@
           Budulínek se najedl hrášku už dost a ještě mu zbylo. Otevřel lišce,
           přistrčil jí talíř a povídá: „Na a jez!“
         </p>
-        <p>
+        <p class="this-is-interesting-paragraph">
           Liška hrášek snědla, vzala Budulínka na ocásek a vozila ho po lavici,
           vozila ho po světnici, pak s ním vyběhla na silnici, ze silnice do
           polí, z polí do lesa a tam šup do liščí díry!
         </p>
-        <p>
+        <p class="this-is-interesting-paragraph">
           Dědeček s babičkou přišli domů a hledali Budulínka. Hledali a hledali,
           ale nenašli. Babička plakala, naříkala a jen svého Budulínka pořád
           volala. Když to dědeček viděl, vzal housličky, babičce dal bubínek a
@@ -121,7 +105,7 @@
           Dědeček honem naladil housličky, babička si připravila bubínek a už
           oba spustili písničku:
         </p>
-        <img src="/images/budulinek.jpg" width="100%" class="story-image">
+        <img src="/images/budulinek.jpg" class="story-image" alt="Ilustrace Budulínka">
         <p>
           „Máme doma housličky a pěkný bubínek, jsou tam tři lištičky a náš
           Budulínek.“

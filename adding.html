@@ -53,70 +53,49 @@
       <h1>Přidávání a odebírání elementů</h1>
 
       <div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Zadání
-        </button>
-      </h5>
-    </div>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Zadání
+              </button>
+            </h5>
+          </div>
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-<ol>
-            <li>
-              Ověř, že tlačíko <code>Přidej kočku</code> přidá kartu s kočkou.
-            </li>
-            <li>
-              Ověř, že tlačíko <code>Přidej kočku</code> dokáže přidat vícero
-              karet s kočkou.
-            </li>
-            <li>
-              Ověř, že tlačíko <code>Odeber kočku</code> odebre jednu kartu s
-              kočkou.
-            </li>
-            <li>
-              Ověř, že tlačíko <code>Apokalypsa!</code> smaže všechny karty s
-              kočkou.
-            </li>
-            <li>
-              Ověř, že počítadlo koček reaguje na přidání kočky, smazání kočky, smazání všech koček
-            </li>
-            <li>
-              Ověř, že lze přidat 20 karet s kočkou.
-            </li>
-            <li>
-              Zajisti, aby Tvé testy byly atomické = aby byly na sobě nezávislé, daly se spouštět jednotlivě.
-            </li>
-            <li>Ověř, že tlačítka na odebrání jsou aktivní jen, když je zobrazena aspoň jedna karta kočky </li>
-            <li>Ověř, že tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky.</li>
-          </ol>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <ol>
+                  <li>
+                    Ověř, že tlačíko <code>Přidej kočku</code> přidá kartu s kočkou.
+                  </li>
+                  <li>
+                    Ověř, že tlačíko <code>Přidej kočku</code> dokáže přidat vícero
+                    karet s kočkou.
+                  </li>
+                  <li>
+                    Ověř, že tlačíko <code>Odeber kočku</code> odebre jednu kartu s
+                    kočkou.
+                  </li>
+                  <li>
+                    Ověř, že tlačíko <code>Apokalypsa!</code> smaže všechny karty s
+                    kočkou.
+                  </li>
+                  <li>
+                    Ověř, že počítadlo koček reaguje na přidání kočky, smazání kočky, smazání všech koček
+                  </li>
+                  <li>
+                    Ověř, že lze přidat 20 karet s kočkou.
+                  </li>
+                  <li>
+                    Zajisti, aby Tvé testy byly atomické = aby byly na sobě nezávislé, daly se spouštět jednotlivě.
+                  </li>
+                  <li>Ověř, že tlačítka na odebrání jsou aktivní jen, když je zobrazena aspoň jedna karta kočky </li>
+                  <li>Ověř, že tlačítka na odebrání jsou deaktivována po smazání poslední karty kočky.</li>
+                </ol>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Hint
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
- <p class="card-text">
-            Využij <code>$('TvujSelector')</code> pro vyhledání jednoho
-            elementu, popřípadě <code>$$('TvujSelector')</code> pro pole
-            elementů.
-          </p>
-          <p class="card-text">
-            Využij <code>it.only("test", ()=>{})</code> pro spuštění jednoho testu a ověření, že lze pustit samostatně.
-          </p>
-      </div>
-    </div>
-  </div>
-</div>
 
       <div class="row">
         <div class="col">
