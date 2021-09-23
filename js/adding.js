@@ -8,7 +8,6 @@ $(document).ready(function () {
       <img src="images/cat.png" class="card-img-top" alt="Kočka" />
       <div class="card-body">
         <h5 class="card-title">Kočka</h5>
-        <p class="card-text">A jaké krásné očička má!</p>
       </div>
     </div>
   </div>`)

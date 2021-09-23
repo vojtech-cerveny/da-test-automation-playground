@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const username = "czechitas"
-  const password = "D4Ostr4v42020"
+  const password = "budoucnost"
 
   const showLoginPopUp = (type, message) => {
     const classType = type == "success" ? "success" : "danger"

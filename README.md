@@ -1,9 +1,12 @@
-# Czechitas DA: Testování Ostrava 2020
-## Automation page
+# Czechitas - Digitální akademie: Testování
 
-Jednoduchá stránka pro vyzkoušení automatizace v wdio. Stack - `HTML`, `bootstrap`, `jQuery`. Holky by měly mít základy HTML + JS za sebou, takže by mohly chápat a rozumět JS části. Deployment je taktéž velmi jednoduchý - stačí nahrát soubory na repl.it. Holky mají přístup na sem, i na repl.it, aby se mohly podívat, jak web funguje. 
+## Automation Playground
 
-Momentálně web se snaží napodobit základní flow na webových stránkách. 
+Jednoduché hřiště pro vyzkoušení automatizace pomocí kódu (web driver).
+Stack - `HTML`, `bootstrap`, `jQuery`.
+Studentky by měly mít základy HTML + JS za sebou, takže by mohly chápat a rozumět JS části. Deployment je taktéž velmi jednoduchý - stačí nahrát soubory na repl.it.
+
+Momentálně web se snaží napodobit základní flow na webových stránkách.
 * Navigace
 * Přidávání a odebírání elementů
 * Klikání
@@ -15,3 +18,7 @@ Momentálně web se snaží napodobit základní flow na webových stránkách.
 * atd. atd.
 
 Pull requesty jsou vítány.
+
+## Autor
+
+Autorem je Vojtěch "Cervik" Červený (https://github.com/vojtech-cerveny).
