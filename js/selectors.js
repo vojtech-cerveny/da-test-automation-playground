@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('button').click( function() {
+  $('.btn').click( function() {
     $(this).removeClass('btn-primary')
     $(this).addClass('btn-success')
   })
