@@ -7,7 +7,7 @@ Stack - `HTML`, `bootstrap`, `jQuery`.
 Studentky by měly mít základy HTML + JS za sebou, takže by mohly chápat a rozumět JS části.
 Deployment je taktéž velmi jednoduchý - stačí nahrát soubory na repl.it.
 
-Demo je nasazeno na adrese: <https://da-test-automation-playground.czechitas.repl.co/>
+Demo je nasazeno na adrese: <https://automation-playground.czechitas.repl.co/>
 
 Momentálně web se snaží napodobit základní flow na webových stránkách.
 * Navigace
