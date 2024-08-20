@@ -14,7 +14,13 @@
 
   <body>
     <nav class="navbar sticky-top navbar-light bg-light">
-      <a href="/"><img src="images/logo.png" width="208" height="75" alt="Czechitas logo"/></a>
+      <a href="/"
+        ><img
+          src="images/logo.png"
+          width="208"
+          height="75"
+          alt="Czechitas logo"
+      /></a>
       <a class="navbar-brand" href="/">Digitální akademie: Testování</a>
     </nav>
     <ul class="nav nav-tabs">
@@ -70,18 +76,30 @@
       </section>
 
       <section id="secretPasswordSection">
-        <input name="secret" type="hidden" id="secretPassword" value="">
+        <label>
+          Secret password:
+          <input name="secret" type="hidden" id="secretPassword" value="" />
+        </label>
         <div class="form-row align-items-center">
           <div class="col-auto">
-            <input type="password" class="form-control mb-2" id="secretNumberInput" placeholder="Secret number">
+            <input
+              type="password"
+              class="form-control mb-2"
+              id="secretNumberInput"
+              placeholder="Secret number"
+            />
           </div>
           <div class="col-auto">
-            <button id="checkSecretNumber" type="submit" class="btn btn-primary mb-2">Check number!</button>
+            <button
+              id="checkSecretNumber"
+              type="submit"
+              class="btn btn-primary mb-2"
+            >
+              Check number!
+            </button>
           </div>
         </div>
-        <small id="passwordHelpBlock" class="form-text text-muted">
-
-        </small>
+        <small id="passwordHelpBlock" class="form-text text-muted"> </small>
       </section>
     </div>
 

@@ -1,18 +1,18 @@
-const colors = ['#ffc000', '#ff3b3b', '#ff8400'];
+const colors = ["#ffc000", "#ff3b3b", "#ff8400"];
 const bubbles = 25;
 
 const explode = (x, y) => {
   let particles = [];
   let ratio = window.devicePixelRatio;
-  let c = document.createElement('canvas');
-  let ctx = c.getContext('2d');
+  let c = document.createElement("canvas");
+  let ctx = c.getContext("2d");
 
-  c.style.position = 'absolute';
-  c.style.left = (x - 100) + 'px';
-  c.style.top = (y - 100) + 'px';
-  c.style.pointerEvents = 'none';
-  c.style.width = 400 + 'px';
-  c.style.height = 400 + 'px';
+  c.style.position = "absolute";
+  c.style.left = x - 100 + "px";
+  c.style.top = y - 100 + "px";
+  c.style.pointerEvents = "none";
+  c.style.width = 400 + "px";
+  c.style.height = 400 + "px";
   c.style.zIndex = 100;
   c.width = 400 * ratio;
   c.height = 400 * ratio;
@@ -29,21 +29,21 @@ const explode = (x, y) => {
       friction: 0.9,
       opacity: r(0, 0.5, true),
       yVel: 0,
-      gravity: 0.1
+      gravity: 0.1,
     });
   }
 
   render(particles, ctx, c.width, c.height);
   setTimeout(() => document.body.removeChild(c), 500);
-}
+};
 
 const render = (particles, ctx, width, height) => {
   requestAnimationFrame(() => render(particles, ctx, width, height));
   ctx.clearRect(0, 0, width, height);
 
   particles.forEach((p, i) => {
-    p.x += p.speed * Math.cos(p.rotation * Math.PI / 180);
-    p.y += p.speed * Math.sin(p.rotation * Math.PI / 180);
+    p.x += p.speed * Math.cos((p.rotation * Math.PI) / 180);
+    p.y += p.speed * Math.sin((p.rotation * Math.PI) / 180);
 
     p.opacity -= 0.01;
     p.speed *= p.friction;
@@ -61,72 +61,188 @@ const render = (particles, ctx, width, height) => {
   });
 
   return ctx;
-}
+};
 
-const r = (a, b, c) => parseFloat((Math.random() * ((a ? a : 1) - (b ? b : 0)) + (b ? b : 0)).toFixed(c ? c : 0));
+const r = (a, b, c) =>
+  parseFloat(
+    (Math.random() * ((a ? a : 1) - (b ? b : 0)) + (b ? b : 0)).toFixed(
+      c ? c : 0
+    )
+  );
 
 //document.querySelector('.js-explosion').addEventListener('mouseover', e => explode(e.pageX, e.pageY));
 
-
-const animals = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🦊', '🐻', '🐼', '🐨', '🐯', '🦁', '🐮', '🐷', '🐽', '🐸', '🐵', '🙈', '🙉', '🙊', '🐒', '🐔', '🐧', '🐦', '🐤', '🐣', '🐥', '🦆', '🦅', '🦉', '🦇', '🐺', '🐗', '🐴', '🦄', '🐝', '🐛', '🦋', '🐌', '🐞', '🐜', '🦟', '🦗', '🕷', '🕸', '🦂', '🐢', '🐍', '🦎', '🦖', '🦕', '🐙', '🦑', '🦐', '🦞', '🦀', '🐡', '🐠', '🐟', '🐬', '🐳', '🐋', '🦈', '🐊', '🐅', '🐆', '🦓', '🦍', '🐘', '🦛', '🦏', '🐪', '🐫', '🦒', '🦘', '🐃', '🐂', '🐄', '🐎', '🐖', '🐏', '🐑', '🦙', '🐐', '🦌', '🐕', '🐩', '🐈', '🐓', '🦃', '🦚', '🦜', '🦢', '🕊', '🐇', '🦝', '🦡', '🐁', '🐀', '🐿', '🦔']
-let correct = false
+const animals = [
+  "🐶",
+  "🐱",
+  "🐭",
+  "🐹",
+  "🐰",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🦊",
+  "🐻",
+  "🐼",
+  "🐨",
+  "🐯",
+  "🦁",
+  "🐮",
+  "🐷",
+  "🐽",
+  "🐸",
+  "🐵",
+  "🙈",
+  "🙉",
+  "🙊",
+  "🐒",
+  "🐔",
+  "🐧",
+  "🐦",
+  "🐤",
+  "🐣",
+  "🐥",
+  "🦆",
+  "🦅",
+  "🦉",
+  "🦇",
+  "🐺",
+  "🐗",
+  "🐴",
+  "🦄",
+  "🐝",
+  "🐛",
+  "🦋",
+  "🐌",
+  "🐞",
+  "🐜",
+  "🦟",
+  "🦗",
+  "🕷",
+  "🕸",
+  "🦂",
+  "🐢",
+  "🐍",
+  "🦎",
+  "🦖",
+  "🦕",
+  "🐙",
+  "🦑",
+  "🦐",
+  "🦞",
+  "🦀",
+  "🐡",
+  "🐠",
+  "🐟",
+  "🐬",
+  "🐳",
+  "🐋",
+  "🦈",
+  "🐊",
+  "🐅",
+  "🐆",
+  "🦓",
+  "🦍",
+  "🐘",
+  "🦛",
+  "🦏",
+  "🐪",
+  "🐫",
+  "🦒",
+  "🦘",
+  "🐃",
+  "🐂",
+  "🐄",
+  "🐎",
+  "🐖",
+  "🐏",
+  "🐑",
+  "🦙",
+  "🐐",
+  "🦌",
+  "🐕",
+  "🐩",
+  "🐈",
+  "🐓",
+  "🦃",
+  "🦚",
+  "🦜",
+  "🦢",
+  "🕊",
+  "🐇",
+  "🦝",
+  "🦡",
+  "🐁",
+  "🐀",
+  "🐿",
+  "🦔",
+];
+let correct = false;
 function timeout() {
   setTimeout(function () {
     if (correct) {
-      return
+      return;
     }
-    $('button').text(animals[Math.floor(Math.random() * animals.length)])
+    $("button").text(animals[Math.floor(Math.random() * animals.length)]);
     timeout();
   }, 200);
 }
 
-let explodeCounter = 0
+let explodeCounter = 0;
 setExplosion = () => {
   setTimeout(function () {
     if (explodeCounter > 6000) {
-      return
+      return;
     }
-    explodeCounter++
-    explode(Math.floor(Math.random() * window.innerWidth - 300), Math.floor(Math.random() * window.innerHeight - 300))
+    explodeCounter++;
+    explode(
+      Math.floor(Math.random() * window.innerWidth - 300),
+      Math.floor(Math.random() * window.innerHeight - 300)
+    );
     setExplosion();
   }, 100);
-}
-
+};
 
 $(document).ready(function () {
-  $('button').click(function () {
+  $("button").click(function () {
     correct = true;
-    if ($(this).hasClass('btn-danger')) {
-      return
+    if ($(this).hasClass("btn-danger")) {
+      return;
     }
 
-    if ($(this).text() == '🦊') {
-      $(this).removeClass('btn-primary')
-      $(this).addClass('btn-success')
-      $('#somethingForYou').html(`
-      <p> Gratuluji! Pátý úkol splněn! Nastav <code>browser.pause(30000)</code> a vychutnej si ohňostroj s 🦊 </p>
-      `)
-      setExplosion()
+    if ($(this).text() == "🦊") {
+      $(this).removeClass("btn-primary");
+      $(this).addClass("btn-success");
+      $("#somethingForYou").html(`
+      <p title="gratulation" alt="gratulation"> Gratuluji! Tvůj úkol je splněn! Vychutnej si ohňostroj s 🦊 </p>
+      `);
+      setExplosion();
     } else {
-      $(this).removeClass('btn-primary')
-      $(this).addClass('btn-danger')
-      $('#somethingForYou').html(`
-      <p> 🐵 🙈 Ne. Takhle ne. 🙉 🙊 </p>
-      `)
+      $(this).removeClass("btn-primary");
+      $(this).addClass("btn-danger");
+      $("#somethingForYou").html(`
+      <p title="shit-happens"> 🐵 🙈 Ne. Takhle ne. 🙉 🙊 </p>
+      `);
     }
-  })
-  timeout()
-
-  // $("#like-button").click(function () {
-  //   const lvl = Number.parseInt($('#lvlAwesome').text())
-  //   $('#lvlAwesome').text(lvl + 1)
-  // })
-
-
+  });
+  timeout();
 });
-
-
-
-
-
-
